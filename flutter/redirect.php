@@ -6,14 +6,14 @@ session_start();
         $currency = "NGN"; //Correct Currency from Server
 
         $query = array(
-            "SECKEY" => "FLWSECK-c515cdd4c49b9f37a6b9c85d1068d20a-X",
+            "SECKEY" => "FLWSECK-c5c631cb1784406225c4c78ba30ee517-X",
             "txref" => $ref,
             "include_payment_entity" => "1"
         );
 
         $data_string = json_encode($query);
                 
-        $ch = curl_init('https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/xrequery');                                                                      
+        $ch = curl_init('https://api.ravepay.co/flwv3-pug/getpaidx/api/v2/verify');                                                                      
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                              
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
