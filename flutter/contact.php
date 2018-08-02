@@ -104,7 +104,7 @@ session_start();
     $email_message .= "Course Link: ".clean_string($url)."\n";
  
 // create email headers
-$headers = 'From: OChe < i@ocheben.com >'."\r\n".
+$headers = 'From: Courses < ocheben@gmail.com >'."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  
