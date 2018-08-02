@@ -7,16 +7,16 @@ $_SESSION["course"] = $_POST['course'];
 $curl = curl_init();
 
 $customer_email = $_POST['email'];
-$amount = 5000;  
+$amount = 100;  
 $currency = "NGN";
 $txref = md5(uniqid(rand(), true)); // ensure you generate unique references per transaction.
-$PBFPubKey = "FLWPUBK-7e6dd33bff4a303d3c2b30ddb2c8bc4d-X"; // get your public key from the dashboard.
+$PBFPubKey = "FLWPUBK-7817852e5d87bd49e28aad506b3d8b4a-X"; // get your public key from the dashboard.
 $redirect_url = "http://35.226.222.250/flutcourse/flutter/redirect.php";
 //$payment_plan = "pass the plan id"  this is only required for recurring payments.
 
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/v2/hosted/pay",
+  CURLOPT_URL => "https://api.ravepay.co/flwv3-pug/getpaidx/api/v2/hosted/pay",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => json_encode([
