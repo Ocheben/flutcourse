@@ -32,37 +32,37 @@ session_start();
       $cname = "History Course";
     }
 
-    if ($comments == "Art") {
+    else if ($comments == "Art") {
       $url = "http://www.learner.org/courses/globalart/";
       $cname = "Art Course";
     }
 
-    if ($comments == "Eco") {
+    else if ($comments == "Eco") {
       $url = "https://www.youtube.com/playlist?list=PL303D52E352C0B7D9&feature=plcp";
       $cname = "Economics Course";
     }
  
-    if ($comments == "film") {
+    else if ($comments == "film") {
       $url = "https://www.youtube.com/playlist?list=PLbMVogVj5nJQsaj5p_MRYLGhUtmpaEDB0";
       $cname = "Film Course";
     }
  
-    if ($comments == "lang") {
+    else if ($comments == "lang") {
       $url = "http://www.openculture.com/2014/01/learn-latin-old-english-sanskrit-classical-greek-other-ancient-languages-in-10-lessons.html";
       $cname = "Ancient Languages Course";
     }
  
-    if ($comments == "law") {
+    else if ($comments == "law") {
       $url = "https://www.youtube.com/playlist?list=PLh9mgdi4rNeyfbeQuCxF2nGCMmCcJPoIU";
       $cname = "Law Course";
     }
  
-    if ($comments == "lit") {
+    else if ($comments == "lit") {
       $url = "http://www.openculture.com/modern-poetry-a-free-course-from-yale";
       $cname = "Literature Course";
     }
  
-    if ($comments == "phil") {
+    else if ($comments == "phil") {
       $url = "http://www.openculture.com/a-history-of-philosophy-in-81-video-lectures";
       $cname = "Philosophy Course";
     }
