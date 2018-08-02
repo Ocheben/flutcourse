@@ -5,21 +5,7 @@ session_start();
     $email_to = $_SESSION["email"];
     $email_subject = "Message from Courses";
  
-    function died($error) {
-        // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        die();
-    }
- 
- 
-    // validation expected data exists
-    if(!isset($_SESSION["name"]) ||
-        !isset($_SESSION["email"])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
-    }
+    
  
      
  
@@ -32,37 +18,37 @@ session_start();
       $cname = "History Course";
     }
 
-    else if ($comments == "Art") {
+    if ($comments == "Art") {
       $url = "http://www.learner.org/courses/globalart/";
       $cname = "Art Course";
     }
 
-    else if ($comments == "Eco") {
+    if ($comments == "Eco") {
       $url = "https://www.youtube.com/playlist?list=PL303D52E352C0B7D9&feature=plcp";
       $cname = "Economics Course";
     }
  
-    else if ($comments == "film") {
+    if ($comments == "film") {
       $url = "https://www.youtube.com/playlist?list=PLbMVogVj5nJQsaj5p_MRYLGhUtmpaEDB0";
       $cname = "Film Course";
     }
  
-    else if ($comments == "lang") {
+    if ($comments == "lang") {
       $url = "http://www.openculture.com/2014/01/learn-latin-old-english-sanskrit-classical-greek-other-ancient-languages-in-10-lessons.html";
       $cname = "Ancient Languages Course";
     }
  
-    else if ($comments == "law") {
+    if ($comments == "law") {
       $url = "https://www.youtube.com/playlist?list=PLh9mgdi4rNeyfbeQuCxF2nGCMmCcJPoIU";
       $cname = "Law Course";
     }
  
-    else if ($comments == "lit") {
+    if ($comments == "lit") {
       $url = "http://www.openculture.com/modern-poetry-a-free-course-from-yale";
       $cname = "Literature Course";
     }
  
-    else if ($comments == "phil") {
+    if ($comments == "phil") {
       $url = "http://www.openculture.com/a-history-of-philosophy-in-81-video-lectures";
       $cname = "Philosophy Course";
     }
@@ -85,9 +71,7 @@ session_start();
     $error_message .= 'The Comments you entered do not appear to be valid.<br />';
   }
  
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
+  
  
     $email_message = "Hello, ".clean_string($first_name)."\n";
     $email_message = "Welcome to".clean_string($cname)."\n";
@@ -128,9 +112,9 @@ $headers = 'From: Courses < i@ocheben.com >'."\r\n".
 		<!-- Wrapper -->
 			<div id="wrapper">
 					<div class="topnav" id="myTopnav">
-							<a href="http://35.226.222.250/flutcourse" class="active" style="font-weight: 700; font-size:25px">COURSES</a>
-							<a href="http://35.226.222.250/flutcourse" class=opts>About</a>
-							<a href="http://35.226.222.250/flutcourse" class=opts>Courses</a>
+							<a href="../index.html" class="active" style="font-weight: 700; font-size:25px">COURSES</a>
+							<a href="../index.html" class=opts>About</a>
+							<a href="../index.html" class=opts>Courses</a>
 							<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 							  <i class="fa fa-bars"></i>
 							</a>
@@ -139,8 +123,8 @@ $headers = 'From: Courses < i@ocheben.com >'."\r\n".
               <section id="homea">
                                 <header style="position: relative; top: 35%;  margin-top: 0px; color: #fff">
 									<h2 style="color:#fff">Welcome</h2>
-									<p>You have been Enrolled!<br />
-									An email has been sent to you with a link to the course.</p>
+									<p>You have been Enrolled in <?php echo $cname?>!<br />
+									Click <a href="<?php echo $comments ?>">here</a> to start course.</p>
 								</header>
                                 </section>
 
