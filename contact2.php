@@ -65,7 +65,7 @@ if(isset($_POST['email'])) {
     $email_message .= "Comments: ".clean_string($comments)."\n";
  
 // create email headers
-$headers = 'From: Appleworld < info@appleworld.com.ng >'."\r\n".
+$headers = 'From: Courses < i@ocheben.com >'."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  
@@ -89,9 +89,9 @@ $headers = 'From: Appleworld < info@appleworld.com.ng >'."\r\n".
 		<!-- Wrapper -->
 			<div id="wrapper">
 					<div class="topnav" id="myTopnav">
-							<a href="#home" class="active" style="font-weight: 700; font-size:25px">COURSES</a>
-							<a href="#about" class=opts>About</a>
-							<a href="#menu" class=opts>Courses</a>
+							<a href="http://35.226.222.250/flutcourse" class="active" style="font-weight: 700; font-size:25px">COURSES</a>
+							<a href="http://35.226.222.250/flutcourse" class=opts>About</a>
+							<a href="http://35.226.222.250/flutcourse" class=opts>Courses</a>
 							<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 							  <i class="fa fa-bars"></i>
 							</a>
