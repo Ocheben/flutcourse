@@ -124,7 +124,7 @@ $headers = 'From: Courses < i@ocheben.com >'."\r\n".
                                 <header style="position: relative; top: 35%;  margin-top: 0px; color: #fff">
 									<h2 style="color:#fff">Welcome</h2>
 									<p>You have been Enrolled in <?php echo $cname?>!<br />
-									Click <a href="<?php echo $comments ?>">here</a> to start course.</p>
+									Click <a href="<?php echo $url ?>">here</a> to start course.</p>
 								</header>
                                 </section>
 
