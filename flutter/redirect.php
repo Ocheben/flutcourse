@@ -40,7 +40,7 @@ session_start();
   			 // please check other things like whether you already gave value for this ref
           // if the email matches the customer who owns the product etc
           //Give Value and return to Success page
-          header("Location: http://ocheben.com/course/flutter/contact.php");
+          header("Location: http://http://35.226.222.250/flutcourse/flutter/contact.php");
 die();
         } else {
             //Dont Give Value and return to Failure page
